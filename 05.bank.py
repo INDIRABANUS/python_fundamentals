@@ -56,7 +56,7 @@ class Bank:
     customer = self.customers[customerId]
     print(f"{customer["name"]} your current balance is {customer["balance"]}")
 
-
+"""
 my_bank = Bank("Indian Bank")
 
 my_bank.create_customer("A0001","indira")
@@ -66,3 +66,49 @@ my_bank.create_customer("A0002","pavakka")
 
 my_bank.view_customers()
 my_bank.check_balence("A0001")
+
+
+"""
+
+my_bank = Bank("indian bank")
+
+
+while True:
+
+  print("=== BANK APPLICATION ===")
+  print('''
+1. create account 
+2. deposite
+3. withdraw       
+4. check balance
+5. view customers
+0. exit \n ''')
+  
+
+  choice = input("Enter your choice: ")
+
+  if choice == "0":
+    print("\nThank you")
+    break
+
+  elif choice == "1":
+    customerId = input("Enter customer id: ")
+    name = input("Enter name: ")
+    my_bank.create_customer(customerId,name)
+
+  elif choice == "2":
+    customerId = input("Enter customer id: ")
+    amount = int(input("Enter amount: "))
+    my_bank.deposite(customerId,amount)
+
+  elif choice == "3":
+    customerId = input("Enter customer id: ")
+    amount = int(input("Enter amount: "))
+    my_bank.withdraw(customerId,amount)
+
+  elif choice == "4":
+    customerId = input("Enter customer id: ")
+    my_bank.check_balence(customerId)
+
+  elif choice == "5":
+    my_bank.view_customers()
