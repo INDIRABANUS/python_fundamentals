@@ -130,15 +130,48 @@ def sum_of_numbers(n):
 print(sum_of_numbers(10))"""
 
 #count vowels
-
+"""
 def count_vowels(str):
   count = 0
   vowels = "aeiouAEIOU"
 
   for char in str:
     if char in vowels:
+      print(char)
       count += 1
       
   return count
   
 print(count_vowels("Hello world"))
+"""
+#reverse the string 
+"""
+def reverse_string(s):
+  rev = ""
+  for char in s:
+    rev = char + rev
+  return rev 
+
+print(reverse_string("pavi"))"""
+
+#palindrome
+
+"""def is_palindrome(num):
+  original = str(num)
+  reversed_num = original[::-1]
+  return original == reversed_num
+
+print(is_palindrome(11256211))
+"""
+
+#largerst list
+
+
+def max_in_list(lst):
+  maximum = lst[0]
+  for num in lst:
+    if num > maximum:
+      maximum = num
+  return maximum
+
+print(max_in_list([1,2,3,9,8,7]))
